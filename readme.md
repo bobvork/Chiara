@@ -38,6 +38,14 @@ There are still some optimisations I would like to do:
 * Only update parts of the display that have to be updated. This should decrease system usage (and improve battery life)
 * More options for the date (US format, bigger font size)
 
+## Attributions
+
+The font used for the time is Fairview. You can find it at Lost Type Co-op:
+
+[http://www.losttype.com/fairview/?name=fairview][fairview]
+
+[fairview]: http://www.losttype.com/fairview/?name=fairview
+
 ## License
 
 Do whatever you want with this. I mostly copied stuff and moved it around anyway.
