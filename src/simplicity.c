@@ -28,20 +28,19 @@ int image_slot_state[TOTAL_IMAGE_SLOTS] = {EMPTY_SLOT, EMPTY_SLOT, EMPTY_SLOT, E
 Layer line_layer;
 
 void line_layer_update_callback(Layer *me, GContext* ctx) {
-  (void)me;
+	(void)me;
 
-  graphics_context_set_stroke_color(ctx, GColorWhite);
+	graphics_context_set_stroke_color(ctx, GColorWhite);
 
 // Line above clock
-  graphics_draw_line(ctx, GPoint(15, 45), GPoint(130, 45));
-  graphics_draw_line(ctx, GPoint(15, 44), GPoint(130, 44));
+	graphics_draw_line(ctx, GPoint(15, 45), GPoint(130, 45));
+	graphics_draw_line(ctx, GPoint(15, 44), GPoint(130, 44));
 
 // Line below clock
-  graphics_draw_line(ctx, GPoint(15, 121), GPoint(130, 121));
-  graphics_draw_line(ctx, GPoint(15, 120), GPoint(130, 120));
+	graphics_draw_line(ctx, GPoint(15, 121), GPoint(130, 121));
+	graphics_draw_line(ctx, GPoint(15, 120), GPoint(130, 120));
 
 }
-
 
 void load_digit_image_into_slot(int slot_number, int digit_value) {
 	// TODO: Signal these error(s)?
@@ -75,7 +74,7 @@ void unload_digit_image_from_slot(int slot_number) {
 }
 
 void display_time(PblTm *tick_time) {
-		int hours = tick_time->tm_hour;
+	int hours = tick_time->tm_hour;
 	int minutes = tick_time->tm_min;
 
 	int value = ( hours * 100 + minutes) % 10000;
@@ -121,12 +120,12 @@ void handle_init(AppContextRef ctx) {
 
 	// Initial time update:
 	PblTm tick_time;
-  get_time(&tick_time);
-  display_time(&tick_time);
+	get_time(&tick_time);
+	display_time(&tick_time);
 
-  layer_init(&line_layer, window.layer.frame);
-  line_layer.update_proc = &line_layer_update_callback;
-  layer_add_child(&window.layer, &line_layer);
+	layer_init(&line_layer, window.layer.frame);
+	line_layer.update_proc = &line_layer_update_callback;
+	layer_add_child(&window.layer, &line_layer);
 }
 
 

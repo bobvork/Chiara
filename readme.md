@@ -2,6 +2,7 @@
 
 This is my first Pebble watchface. I combined the code of a few examples to get a simple watch that displays the time as 4 digits (24 hours). The result is a sort of military format (2100 for nine PM).
 
+![A Mockup of the Chiara Pebble Watchface](/Chiara.png "Chiara")
 
 Some considerations:
 
@@ -10,7 +11,7 @@ Some considerations:
 * The date is currently in European format (Day-Month), and is very small. I Like it this way, but I might add more options in the future.
 
 
-I will upload a mockup or picture soon.
+
 
 
 ## Installation instructions
