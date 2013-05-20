@@ -1,0 +1,9 @@
+build
+.waf-*/
+include
+lib
+tools
+.lock-waf_darwin_build
+pebble_app.ld
+waf
+wscript

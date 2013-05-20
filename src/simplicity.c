@@ -5,12 +5,9 @@
 #define MY_UUID {0xA4, 0x2B, 0xB8, 0xE2, 0xD2, 0x62, 0x4A, 0xA6, 0xAA, 0x30, 0xED, 0xBE, 0x01, 0xE3, 0x8A, 0x02}
 PBL_APP_INFO(MY_UUID, "Chiara", "13 V", 3, 0 /* App version */, RESOURCE_ID_IMAGE_MENU_ICON, APP_INFO_WATCH_FACE);
 
-Window window;
-
-TextLayer text_date_layer;
-//TextLayer text_time_layer;
-
-Layer line_layer;
+Window 		window;
+TextLayer 	text_date_layer;
+Layer 		line_layer;
 
 #define TOTAL_IMAGE_SLOTS 4
 #define NUMBER_OF_IMAGES 10
@@ -118,7 +115,6 @@ void handle_init(AppContextRef ctx) {
 	text_layer_set_text_color(&text_date_layer, GColorWhite);
 	text_layer_set_background_color(&text_date_layer, GColorClear);
 	layer_set_frame(&text_date_layer.layer, GRect(0, 168-15, 144, 15));
-	//text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_ROBOTO_CONDENSED_21)));
 	text_layer_set_font(&text_date_layer, fonts_get_system_font(FONT_KEY_GOTHIC_14));
 	layer_add_child(&window.layer, &text_date_layer.layer);
 
